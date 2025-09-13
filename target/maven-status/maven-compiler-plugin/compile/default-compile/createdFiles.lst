@@ -1,0 +1,4 @@
+com\kong\crudapp\Person.class
+com\kong\crudapp\CrudappApplication.class
+com\kong\crudapp\repository\PersonRepository.class
+com\kong\crudapp\repository\PersonDAO.class
