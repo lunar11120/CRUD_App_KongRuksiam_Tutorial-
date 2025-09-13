@@ -40,6 +40,7 @@ public class PersonRepository implements PersonDAO{
 
     @Override
     public List<Person> findAll() {
+        //fix when not use select * from person
         String hqlQuery = "SELECT p FROM Person p";
         TypedQuery<Person> query =  entitymanager.createQuery(hqlQuery , Person.class);
         return query.getResultList();

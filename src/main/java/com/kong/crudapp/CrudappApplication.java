@@ -24,18 +24,18 @@ public class CrudappApplication {
                     //insertData(persondao);
                     //deleteData(persondao);
                     //getPerson(persondao);
-                    //findAllData(persondao);
-                    updateData(persondao);
+                    findAllData(persondao);
+                    //updateData(persondao);
                     
              };   
         }
         public void insertData(PersonDAO persondao){
-                  Person p1 = new Person("Fortaelza", "shohomen", "fartocu village romangi road pocatona Island");  
+                  Person p1 = new Person("Reiden3333", "Ei33", "Shiroku village 567-25 Inazuma Island");  
                   persondao.save(p1);
                   System.out.println("Insert Complete : "+p1.toString());
         }
         public void deleteData(PersonDAO persondao){
-                  int id = 3;
+                  int id = 7;
                   persondao.delete(id);
                   System.out.println("delete Complete  ID = "+id);
         }   
@@ -51,12 +51,17 @@ public class CrudappApplication {
         }  
         public void findAllData(PersonDAO persondao) {
               List<Person> personList = persondao.findAll();
+
+              //show data list person
+              System.out.println("");
+              System.out.println("list person ===========================================");
               for (Person person : personList) {
                    System.out.println(person.toString());  
               }
+              System.out.println("");
         }  
         public void updateData(PersonDAO persondao) {
-              int id = 4;
+              int id = 8;
               Person p1 = new Person();
                   try {
                        p1 = persondao.getData(id);
@@ -65,8 +70,9 @@ public class CrudappApplication {
                        System.out.println("NODATE : cannot find data -------------");
                   }//end try catch         
                   
-               p1.setFirstname("William");
-               p1.setLastname("Rockyfine");
+               p1.setFirstname("Isomu");
+               p1.setLastname("maminoya");
+               p1.setAddress("DS125 sura city - Bankalatash");
                persondao.update(p1);
                System.out.println("Update success ==================== ");
         }
